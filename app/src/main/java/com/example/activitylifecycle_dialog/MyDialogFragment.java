@@ -17,9 +17,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 public class MyDialogFragment extends DialogFragment{
-    static String TAG = MyDialogFragment.class.getName();
+//    static String TAG = MyDialogFragment.class.getName();
+static String TAG = "@!@";
 
     MyDialogFragment dialogFragment;
+
 
     public static MyDialogFragment newInstance() {
         return new MyDialogFragment();
@@ -63,19 +65,22 @@ public class MyDialogFragment extends DialogFragment{
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        Log.d(TAG, "onAttach() 호출");
+        Log.d(TAG, "[다이얼로그 프래그먼트] onAttach() 호출");
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "onCreate() 호출");
+        Log.d(TAG, "[다이얼로그 프래그먼트] onCreate() 호출");
     }
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        Log.d(TAG, "[다이얼로그 프래그먼트] onCreateView() 호출");
+
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
@@ -87,55 +92,55 @@ public class MyDialogFragment extends DialogFragment{
     @Override
     public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
-        Log.d(TAG, "onViewStateRestored() 호출");
+        Log.d(TAG, "[다이얼로그 프래그먼트] onViewStateRestored() 호출");
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        Log.d(TAG, "onStart() 호출");
+        Log.d(TAG, "[다이얼로그 프래그먼트] onStart() 호출");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        Log.d(TAG, "onResume() 호출");
+        Log.d(TAG, "[다이얼로그 프래그먼트] onResume() 호출");
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        Log.d(TAG, "onPause() 호출");
+        Log.d(TAG, "[다이얼로그 프래그먼트] onPause() 호출");
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        Log.d(TAG, "onStop() 호출");
+        Log.d(TAG, "[다이얼로그 프래그먼트] onStop() 호출");
     }
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.d(TAG, "onSaveInstanceState() 호출");
+        Log.d(TAG, "[다이얼로그 프래그먼트] onSaveInstanceState() 호출");
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        Log.d(TAG, "onDestroyView() 호출");
+        Log.d(TAG, "[다이얼로그 프래그먼트] onDestroyView() 호출");
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "onDestroy() 호출");
+        Log.d(TAG, "[다이얼로그 프래그먼트] onDestroy() 호출");
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        Log.d(TAG, "onDetach() 호출");
+        Log.d(TAG, "[다이얼로그 프래그먼트] onDetach() 호출");
     }
 
     @Override

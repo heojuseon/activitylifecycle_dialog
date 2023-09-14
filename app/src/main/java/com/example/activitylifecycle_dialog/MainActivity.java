@@ -15,18 +15,20 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    static String TAG = MainActivity.class.getName();
+    // static String TAG = MainActivity.class.getName();
+    static String TAG = "@!@";
 
     private Button mSecondActivityButton;
     private Button btn_dialog;
     private Button btn_frag;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Log.d(TAG, "onCreate() 호출됨");
+        Log.d(TAG, "[메인화면] onCreate() 호출됨");
 
         Intent intent = new Intent(MainActivity.this, SecondActivity.class);
         mSecondActivityButton = findViewById(R.id.secondButton);
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         btn_frag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
 
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -83,37 +86,37 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG,"onStart() 호출됨");
+        Log.d(TAG, "[메인화면] onStart() 호출됨");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG, "onResume() 호출됨");
+        Log.d(TAG, "[메인화면] onResume() 호출됨");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, "onPause() 호출됨");
+        Log.d(TAG, "[메인화면] onPause() 호출됨");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, "onStop() 호출됨");
+        Log.d(TAG, "[메인화면] onStop() 호출됨");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d(TAG, "onRestart() 호출됨");
+        Log.d(TAG, "[메인화면] onRestart() 호출됨");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "onDestroy() 호출됨");
+        Log.d(TAG, "[메인화면] onDestroy() 호출됨");
     }
 
 }
